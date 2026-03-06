@@ -22,8 +22,8 @@
 - 当任务与某个技能的职责明显匹配时，即使用户没有点名，也应优先使用对应技能。
 - 使用技能前，先检查对应 `SKILL.md` 是否存在。检查顺序如下：
   1. `<当前项目>\.codex\skills\<skill-name>\SKILL.md`
-  2. `C:\Users\tanxi\.codex\skills\<skill-name>\SKILL.md`
-  3. `C:\Users\tanxi\.codex\skills\.system\<skill-name>\SKILL.md`
+  2. `<用户目录>\.codex\skills\<skill-name>\SKILL.md`
+  3. `<用户目录>\.codex\skills\.system\<skill-name>\SKILL.md`
 - 如果技能缺失、路径不可读或指令不完整，要简要说明问题，并继续采用最佳可行回退方案。
 - 多个技能同时适用时，只选择覆盖任务所需的最小技能集合，并说明使用顺序。
 - 读技能时遵循渐进展开：先读 `SKILL.md`，只在必要时再读其引用的脚本、模板、素材或参考文件。
@@ -41,12 +41,12 @@
 ## 技能来源与更新元信息
 - `ui-ux-pro-max`
   - 来源：`https://github.com/nextlevelbuilder/ui-ux-pro-max-skill`
-  - 当前检测：项目级安装，已在 `C:\Users\tanxi\Documents\New project\.codex\skills\ui-ux-pro-max\SKILL.md` 发现
+  - 当前检测：项目级安装；检查路径示例为 `<当前项目>\.codex\skills\ui-ux-pro-max\SKILL.md`
   - 更新方式：`npx --yes uipro-cli init --ai codex`
   - 最后验证：`2026-03-06`
 - `Product-Manager-Skills`
   - 来源：`https://github.com/deanpeters/Product-Manager-Skills`
-  - 当前检测：用户级 `C:\Users\tanxi\.codex\skills` 未发现对应业务技能；默认按项目级技能目录优先检查，缺失时走回退方案
+  - 当前检测：当前用户级技能目录 `<用户目录>\.codex\skills` 未发现对应业务技能；默认按项目级技能目录优先检查，缺失时走回退方案
   - 更新方式：从上游仓库同步并按需安装到项目级或用户级技能目录
   - 最后验证：`2026-03-06`
 - 文档四件套 `docx`、`xlsx`、`pptx`、`pdf`
@@ -61,7 +61,7 @@
   - 最后验证：`2026-03-06`
 - 系统技能 `skill-creator`、`skill-installer`
   - 来源：Codex 系统技能目录
-  - 当前检测：已在 `C:\Users\tanxi\.codex\skills\.system` 发现
+  - 当前检测：已在 `<用户目录>\.codex\skills\.system` 发现
   - 更新方式：随 Codex 系统技能更新；使用前仍按路径检查 `SKILL.md`
   - 最后验证：`2026-03-06`
 

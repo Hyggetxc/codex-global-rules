@@ -9,9 +9,13 @@
 
 ## 使用方式
 
-如果你希望所有项目默认继承这份规则，建议将仓库中的 `AGENTS.md` 同步到本机用户级路径：
+如果你希望所有项目默认继承这份规则，建议将仓库中的 `AGENTS.md` 同步到本机用户级路径。
 
-`C:\Users\tanxi\.codex\AGENTS.md`
+Windows 示例：
+
+`%USERPROFILE%\.codex\AGENTS.md`
+
+请将上面的 `%USERPROFILE%` 理解为你自己的用户目录，而不是固定用户名。
 
 这样即使某个项目没有单独的 `AGENTS.md`，Codex 也会默认使用这份全局规则。
 
