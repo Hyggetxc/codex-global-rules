@@ -1,34 +1,86 @@
 # codex-global-rules
 
-这份仓库用于保存当前账号的 Codex 全局规则主文件，作为跨项目复用、同步和备份的统一入口。
+[![GitHub Stars](https://img.shields.io/github/stars/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/issues)
+[![AGENTS.md](https://img.shields.io/badge/AGENTS-md-2f81f7?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/blob/main/AGENTS.md)
 
-## 当前内容
+`codex-global-rules` is a repository for maintaining Codex global rules in one place.
 
-- `AGENTS.md`：默认全局规则主文件
-- `snapshots/`：历史快照与变更留档说明目录
+It is designed for people who want to:
 
-## 使用方式
+- keep a single source of truth for cross-project Codex rules
+- sync a reusable `AGENTS.md` across devices or workspaces
+- keep snapshots of important rule changes
+- publish rules in a sanitized way without exposing real local device names or project names
 
-如果你希望所有项目默认继承这份规则，建议将仓库中的 `AGENTS.md` 同步到本机用户级路径。
+## Translations
 
-Windows 示例：
+- [English](./README.md)
+- [简体中文](./README.zh-CN.md)
 
-`%USERPROFILE%\.codex\AGENTS.md`
+## Online
 
-请将上面的 `%USERPROFILE%` 理解为你自己的用户目录，而不是固定用户名。
+- Repository: [https://github.com/Hyggetxc/codex-global-rules](https://github.com/Hyggetxc/codex-global-rules)
+- Main rules file: [AGENTS.md](https://github.com/Hyggetxc/codex-global-rules/blob/main/AGENTS.md)
 
-这样即使某个项目没有单独的 `AGENTS.md`，Codex 也会默认使用这份全局规则。
+## Why This Exists
 
-## 更新原则
+When Codex is used across multiple projects, it is easy for collaboration rules to drift over time.
 
-- 全局规则应保持自包含，不依赖单独项目内的规则文件才能理解。
-- 新增或调整规则时，优先直接更新 `AGENTS.md`。
-- 涉及重要结构调整时，同时在 `snapshots/` 中保留一份快照或说明。
-- 当前仓库不上传技能清单和 PRD 模板，只维护全局规则本身及其快照说明。
+This repository keeps the global rules in a single versioned place so they can be:
 
-## 推荐维护流程
+- reviewed
+- updated
+- backed up
+- reused across projects
+- shared without leaking machine-specific or project-specific private information
 
-1. 先在本机验证 `AGENTS.md` 是否符合当前协作方式。
-2. 如有重大改动，先保存一份快照。
-3. 再提交并推送到本仓库。
-4. 需要同步到其他设备时，优先以本仓库中的 `AGENTS.md` 为准。
+## Features
+
+- Store a central `AGENTS.md` as the main global rules file
+- Keep historical rule snapshots in `snapshots/`
+- Use placeholder paths such as `<用户目录>` instead of real local paths
+- Avoid committing real device names or sensitive project names
+- Maintain a reusable structure for long-term Codex collaboration
+
+## Repository Structure
+
+- `AGENTS.md`: the main global rules file
+- `snapshots/`: backup notes and historical snapshots for important rule changes
+
+## Usage
+
+1. Review the repository-level [`AGENTS.md`](./AGENTS.md).
+2. Adapt it to your own workflow if needed.
+3. Sync it to your Codex user-level global rules path.
+4. Create a snapshot before large changes.
+5. Push changes back to this repository as the canonical source.
+
+Example user-level target path:
+
+- Windows: `%USERPROFILE%\\.codex\\AGENTS.md`
+
+Use your own local user directory when applying the file. Do not commit your real machine path back into the repository.
+
+## Privacy
+
+- This repository is intended to store sanitized global rules only.
+- Real local device names, real usernames, and real project names should not be committed.
+- Use generic placeholders such as `<用户目录>` or `<当前项目>` wherever possible.
+
+## Roadmap
+
+Possible future additions:
+
+- `docs/` for setup guides and examples
+- bilingual docs for more rule modules
+- templates for different Codex usage styles
+- release notes for major rule revisions
+- examples for project-level inheritance patterns
+
+## Support
+
+If this repository helps you standardize and reuse your Codex global rules, please consider giving it a Star:
+
+- [Star this repository](https://github.com/Hyggetxc/codex-global-rules)
