@@ -1,5 +1,7 @@
 # codex-global-rules
 
+> 用一个地方统一管理 Codex 全局规则，方便跨项目复用、备份和同步。
+
 [![GitHub Stars](https://img.shields.io/github/stars/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/network/members)
 [![GitHub Issues](https://img.shields.io/github/issues/Hyggetxc/codex-global-rules?style=flat-square)](https://github.com/Hyggetxc/codex-global-rules/issues)
